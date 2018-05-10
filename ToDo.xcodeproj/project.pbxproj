@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C49FF1420A1B96900646663 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49FF1320A1B96900646663 /* CategoryViewController.swift */; };
-		1C679C5D20A184CC00174037 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C679C5B20A184CC00174037 /* DataModel.xcdatamodeld */; };
+		1C49FF1820A338AC00646663 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49FF1720A338AC00646663 /* Category.swift */; };
+		1C49FF1A20A338B800646663 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C49FF1920A338B800646663 /* Item.swift */; };
 		1C8E2710209981B500F1E41B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E270F209981B500F1E41B /* AppDelegate.swift */; };
 		1C8E2712209981B500F1E41B /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E2711209981B500F1E41B /* ToDoListViewController.swift */; };
 		1C8E2715209981B500F1E41B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C8E2713209981B500F1E41B /* Main.storyboard */; };
@@ -20,7 +21,8 @@
 /* Begin PBXFileReference section */
 		0900AFCB185D7C923E909A27 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		1C49FF1320A1B96900646663 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		1C679C5C20A184CC00174037 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		1C49FF1720A338AC00646663 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		1C49FF1920A338B800646663 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		1C8E270C209981B500F1E41B /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C8E270F209981B500F1E41B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C8E2711209981B500F1E41B /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +80,8 @@
 		1C8E27232099D33100F1E41B /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				1C679C5B20A184CC00174037 /* DataModel.xcdatamodeld */,
+				1C49FF1720A338AC00646663 /* Category.swift */,
+				1C49FF1920A338B800646663 /* Item.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -240,10 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C49FF1A20A338B800646663 /* Item.swift in Sources */,
 				1C49FF1420A1B96900646663 /* CategoryViewController.swift in Sources */,
 				1C8E2712209981B500F1E41B /* ToDoListViewController.swift in Sources */,
-				1C679C5D20A184CC00174037 /* DataModel.xcdatamodeld in Sources */,
 				1C8E2710209981B500F1E41B /* AppDelegate.swift in Sources */,
+				1C49FF1820A338AC00646663 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ToDo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fudia.nextar.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -405,7 +412,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ToDo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fudia.nextar.ToDo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -435,19 +445,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1C679C5B20A184CC00174037 /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1C679C5C20A184CC00174037 /* DataModel.xcdatamodel */,
-			);
-			currentVersion = 1C679C5C20A184CC00174037 /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1C8E2704209981B400F1E41B /* Project object */;
 }
